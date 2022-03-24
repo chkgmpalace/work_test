@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="left-cont">
+                <img id="table" class="img table" src="img/стол.png" alt="стол">
+                <img id="legs" class="img legs" src="img/ножки.png" alt="ножки">
+                <div class="buttons">
+                    <input class="but" type="button" value="Вверх" onclick="table_up()">
+                    <input class="but" type="button" value="Вниз" onclick="table_down()">
+                </div>
+            </div>
+            <div class="right-cont">
+                <h1 class="title-h1">Эргономика — ключ&nbsp;к успеху современного человека </h1>
+                <p class="description">Cтильная столешница , выполненной из экологически безопасного материала (ДСП), и усиленной стальной рамы не составит труда разместить на поверхности инновационного стола большое количество крупногабаритной техники: стол выдерживает нагрузку до 80кг.
+                    Также столешница, обладающая меламиновым покрытием, хорошо переносит механические воздействия (царапины или удары), при контакте с водой не разрушается, устойчиво переносит бытовые химические вещества и не выгорает под воздействием ультрафиолета.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+         function table_up () {
+        x = 0;
+        x = document.getElementById("table").offsetTop;
+        xn = x - 100 ;
+        document.getElementById("table").style.top = xn+"px"
+        }
+
+        function table_down () {
+        x = 0;
+        x = document.getElementById("table").offsetTop;
+        xn = x + 100;
+        document.getElementById("table").style.top = xn+"px"
+        } 
+    </script>
+</body>
+</html>
